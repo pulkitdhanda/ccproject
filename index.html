@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learnify — Online Learning Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-art">
+      <div class="brand brand-light"><span class="brand-mark">L</span> learnify</div>
+      <div class="art-copy">
+        <span class="eyebrow">LEARN WITHOUT LIMITS</span>
+        <h1>Your next skill<br>starts <em>right here.</em></h1>
+        <p>Build skills that move you forward. Learn at your own pace, on your own terms.</p>
+      </div>
+      <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+      <div class="floating-card"><span class="float-icon">✦</span><div><b>Keep growing</b><small>One lesson at a time</small></div></div>
+      <div class="art-bottom">Curiosity is your superpower.</div>
+    </div>
+    <div class="login-panel">
+      <div class="login-box">
+        <div class="brand brand-dark"><span class="brand-mark">L</span> learnify</div>
+        <span class="eyebrow muted">WELCOME BACK</span>
+        <h2>Sign in to learn.</h2>
+        <p class="subtext">Your learning journey is waiting for you.</p>
+        <form id="loginForm">
+          <label for="username">Your name</label>
+          <input id="username" type="text" placeholder="e.g. Alex Morgan" required autocomplete="name">
+          <label for="password">Password</label>
+          <div class="password-wrap"><input id="password" type="password" placeholder="Enter any password" required><button type="button" id="togglePassword" class="eye-btn" aria-label="Show password">◉</button></div>
+          <button class="primary-btn login-btn" type="submit">Continue to Learn <span>→</span></button>
+        </form>
+        <div class="demo-note"><span class="info-dot">i</span><span><b>Demo login:</b> No account or database required. Enter any name and any password to continue.</span></div>
+        <p class="login-foot">By continuing, you agree to make today a learning day.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand brand-dark side-brand" href="#" data-page="dashboard"><span class="brand-mark">L</span> learnify</a>
+      <div class="side-label">MENU</div>
+      <nav class="nav">
+        <button class="nav-link active" data-page="dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-link" data-page="courses"><span>▤</span> Explore courses</button>
+        <button class="nav-link" data-page="my-learning"><span>◷</span> My learning</button>
+        <button class="nav-link" data-page="profile"><span>◎</span> My profile</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-spark">✦</div><b>Keep your streak alive!</b><p>A little progress each day adds up.</p><button id="streakBtn">View learning plan →</button></div>
+        <button class="logout-btn" id="logoutBtn"><span>↪</span> Log out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <b id="pageCrumb">Dashboard</b></div>
+        <div class="top-actions"><button class="icon-btn" title="Notifications" id="notificationBtn">♧<i></i></button><div class="user-mini"><div class="avatar" id="topAvatar">A</div><div><b id="topName">Alex Morgan</b><small>Student</small></div><span class="chevron">⌄</span></div></div>
+      </header>
+      <div id="pageContent" class="page-content"></div>
+      <footer class="footer">© 2026 Learnify <span>Made for curious minds <b>✦</b></span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
